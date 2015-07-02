@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Id="Package.Company.113f61ed-a246-4431-809d-bcd393642488" Version="1.0" Language="en-US" Publisher="Company" />
+    <DisplayName>Package for Test Generation Nunit extensions</DisplayName>
+    <Description xml:space="preserve">Package for Test Generation Nunit extensions</Description>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0]" />
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+  </Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.IntellitestExtension" d:Source="Project" d:ProjectName="IntelliTest.NUnit" Path="|IntelliTest.NUnit|" />
+    <Asset Type="Microsoft.VisualStudio.TestGenerationExtension" d:Source="Project" d:ProjectName="CreateUnitTests.NUnit" Path="|CreateUnitTests.NUnit|" />
+  </Assets>
+</PackageManifest>
