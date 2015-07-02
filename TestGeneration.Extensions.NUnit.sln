@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23020.0
+VisualStudioVersion = 14.0.23023.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Package", "Package\Package.csproj", "{A773B258-30DD-4698-8601-ECC742A712DC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestGeneration.Extensions.NUnit", "Package\TestGeneration.Extensions.NUnit.csproj", "{A773B258-30DD-4698-8601-ECC742A712DC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateUnitTests.NUnit", "CreateUnitTests.NUnit\CreateUnitTests.NUnit.csproj", "{9635AFF9-7554-434D-AA63-556313342E5A}"
 EndProject
