@@ -31,13 +31,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ExtendedReflection">
-      <HintPath>..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Pex\Microsoft.ExtendedReflection.dll</HintPath>
+      <HintPath>$(VS140COMNTOOLS)..\IDE\Extensions\Microsoft\Pex\Microsoft.ExtendedReflection.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ExtendedReflection.Reasoning">
-      <HintPath>..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Pex\Microsoft.ExtendedReflection.Reasoning.dll</HintPath>
+      <HintPath>$(VS140COMNTOOLS)..\IDE\Extensions\Microsoft\Pex\Microsoft.ExtendedReflection.Reasoning.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Pex.Framework">
-      <HintPath>..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Pex\Microsoft.Pex.Framework.dll</HintPath>
+      <HintPath>$(VS140COMNTOOLS)..\IDE\Extensions\Microsoft\Pex\Microsoft.Pex.Framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
