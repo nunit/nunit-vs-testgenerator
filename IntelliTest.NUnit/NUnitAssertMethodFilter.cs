@@ -10,8 +10,7 @@
     internal sealed class NUnitAssertMethodFilter : IAssertMethodFilter
     {
         private NUnitAssertMethodFilter() { }
-        public static NUnitAssertMethodFilter Instance
-            = new NUnitAssertMethodFilter();
+        public static NUnitAssertMethodFilter Instance = new NUnitAssertMethodFilter();
 
         public bool IsAssertMethod(MethodDefinition method, out int usefulParameters)
         {

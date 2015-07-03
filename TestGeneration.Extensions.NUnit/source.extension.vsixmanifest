@@ -3,7 +3,7 @@
   <Metadata>
     <Identity Id="TestGeneration.Extensions.NUnit.113f61ed-a246-4431-809d-bcd393642488" Version="1.0" Language="en-US" Publisher="Company" />
     <DisplayName>Package for Test Generation NUnit extensions</DisplayName>
-    <Description xml:space="preserve">Package for Test Generation Nunit extensions</Description>
+    <Description xml:space="preserve">Test Generation NUnit extensions</Description>
   </Metadata>
   <Installation>
     <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0]" />

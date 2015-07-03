@@ -43,20 +43,14 @@ namespace Samples.Extensions.NUnit
         /// identify of the test framework
         /// </summary>
         /// <value></value>
-        public override string Name
-        {
-            get { return "NUnit"; }
-        }
+        public override string Name => "NUnit";
 
         /// <summary>
         /// Gets the assembly name of the framework main's assembly. This name is used
         /// to automatically discover test frameworks, based the assembly references
         /// </summary>
         /// <value></value>
-        public override ShortAssemblyName AssemblyName
-        {
-            get { return NUnitTestFrameworkMetadata.AssemblyName; }
-        }
+        public override ShortAssemblyName AssemblyName => NUnitTestFrameworkMetadata.AssemblyName;
 
         /// <summary>
         /// Gets the root namespace.
@@ -113,10 +107,7 @@ namespace Samples.Extensions.NUnit
         /// partial test classes
         /// </summary>
         /// <value></value>
-        public override bool SupportsPartialClasses
-        {
-            get { return true; }
-        }
+        public override bool SupportsPartialClasses => true;
 
         /// <summary>
         /// The supports project bitness.
@@ -143,15 +134,8 @@ namespace Samples.Extensions.NUnit
         /// Gets the ExpectedException attribute.
         /// </summary>
         /// <value>The expected exception attribute.</value>
-        public override TypeName ExpectedExceptionAttribute
-        {
-            get
-            {
-                if (this._expectedExceptionAttribute == null)
-                    this._expectedExceptionAttribute = NUnitTestFrameworkMetadata.AttributeName("ExpectedException");
-                return this._expectedExceptionAttribute;
-            }
-        }
+        public override TypeName ExpectedExceptionAttribute => this._expectedExceptionAttribute ??
+                                                               (this._expectedExceptionAttribute = NUnitTestFrameworkMetadata.AttributeName("ExpectedException"));
 
         /// <summary>
         /// Tries the read expected exception.
@@ -239,15 +223,8 @@ namespace Samples.Extensions.NUnit
         /// Gets the name of the fixture attribute
         /// </summary>
         /// <value>The fixture attribute.</value>
-        public override TypeName FixtureAttribute
-        {
-            get
-            {
-                if (this._fixtureAttribute == null)
-                    this._fixtureAttribute = NUnitTestFrameworkMetadata.AttributeName("TestFixture");
-                return this._fixtureAttribute;
-            }
-        }
+        public override TypeName FixtureAttribute => this._fixtureAttribute ??
+                                                     (this._fixtureAttribute = NUnitTestFrameworkMetadata.AttributeName("TestFixture"));
 
         /// <summary>
         /// The _fixture set up attribute.
@@ -259,15 +236,8 @@ namespace Samples.Extensions.NUnit
         /// Gets the name of the fixture setup attribute
         /// </summary>
         /// <value>The fixture set up attribute.</value>
-        public override TypeName FixtureSetupAttribute
-        {
-            get
-            {
-                if (this._fixtureSetUpAttribute == null)
-                    this._fixtureSetUpAttribute = NUnitTestFrameworkMetadata.AttributeName("TestFixtureSetUp");
-                return this._fixtureSetUpAttribute;
-            }
-        }
+        public override TypeName FixtureSetupAttribute => this._fixtureSetUpAttribute ??
+                                                          (this._fixtureSetUpAttribute = NUnitTestFrameworkMetadata.AttributeName("TestFixtureSetUp"));
 
         /// <summary>
         /// The _fixture tear down attribute.
@@ -279,15 +249,8 @@ namespace Samples.Extensions.NUnit
         /// Gets the name of the fixture teardown attribute
         /// </summary>
         /// <value>The fixture tear down attribute.</value>
-        public override TypeName FixtureTeardownAttribute
-        {
-            get
-            {
-                if (this._fixtureTearDownAttribute == null)
-                    this._fixtureTearDownAttribute = NUnitTestFrameworkMetadata.AttributeName("TestFixtureTearDown");
-                return this._fixtureTearDownAttribute;
-            }
-        }
+        public override TypeName FixtureTeardownAttribute => this._fixtureTearDownAttribute ??
+                                                             (this._fixtureTearDownAttribute = NUnitTestFrameworkMetadata.AttributeName("TestFixtureTearDown"));
 
         /// <summary>
         /// The _set up attribute.
@@ -299,15 +262,8 @@ namespace Samples.Extensions.NUnit
         /// Gets the name of the test setup attribute.
         /// </summary>
         /// <value>The set up attribute.</value>
-        public override TypeName SetupAttribute
-        {
-            get
-            {
-                if (this._setUpAttribute == null)
-                    this._setUpAttribute = NUnitTestFrameworkMetadata.AttributeName("SetUp");
-                return this._setUpAttribute;
-            }
-        }
+        public override TypeName SetupAttribute => this._setUpAttribute ??
+                                                   (this._setUpAttribute = NUnitTestFrameworkMetadata.AttributeName("SetUp"));
 
         /// <summary>
         /// The _test attribute.
@@ -319,15 +275,7 @@ namespace Samples.Extensions.NUnit
         /// Gets the name of the test attribute.
         /// </summary>
         /// <value>The set up attribute.</value>
-        public override TypeName TestAttribute
-        {
-            get
-            {
-                if (this._testAttribute == null)
-                    this._testAttribute = NUnitTestFrameworkMetadata.AttributeName("Test");
-                return this._testAttribute;
-            }
-        }
+        public override TypeName TestAttribute => this._testAttribute ?? (this._testAttribute = NUnitTestFrameworkMetadata.AttributeName("Test"));
 
         /// <summary>
         /// The _tear down attribute.
@@ -339,15 +287,8 @@ namespace Samples.Extensions.NUnit
         /// Gets the name of the test teardown attribute.
         /// </summary>
         /// <value>The tear down attribute.</value>
-        public override TypeName TeardownAttribute
-        {
-            get
-            {
-                if (this._tearDownAttribute == null)
-                    this._tearDownAttribute = NUnitTestFrameworkMetadata.AttributeName("TearDown");
-                return this._tearDownAttribute;
-            }
-        }
+        public override TypeName TeardownAttribute => this._tearDownAttribute ??
+                                                      (this._tearDownAttribute = NUnitTestFrameworkMetadata.AttributeName("TearDown"));
 
         /// <summary>
         /// The _ignore attribute.
@@ -359,42 +300,26 @@ namespace Samples.Extensions.NUnit
         /// Gets the ignore attribute.
         /// </summary>
         /// <value>The ignore attribute.</value>
-        public override TypeName IgnoreAttribute
-        {
-            get
-            {
-                if (this._ignoreAttribute == null)
-                    this._ignoreAttribute = NUnitTestFrameworkMetadata.AttributeName("Ignore");
-                return this._ignoreAttribute;
-            }
-        }
+        public override TypeName IgnoreAttribute => this._ignoreAttribute ??
+                                                    (this._ignoreAttribute = NUnitTestFrameworkMetadata.AttributeName("Ignore"));
 
         /// <summary>
         /// Whether the ignore attribute constructor takes a message as its first argument.
         /// </summary>
         /// <value></value>
-        protected override bool HasIgnoreAttributeMessage
-        {
-            get { return true; }
-        }
+        protected override bool HasIgnoreAttributeMessage => true;
 
         /// <summary>
         /// Gets the ignore message property.
         /// </summary>
         /// <value>The ignore message property.</value>
-        protected override string IgnoreMessageProperty
-        {
-            get { return "Reason"; }
-        }
+        protected override string IgnoreMessageProperty => "Reason";
 
         /// <summary>
         /// Gets the expected exception property name.
         /// </summary>
         /// <value>The expected exception property.</value>
-        protected override string ExpectedExceptionProperty
-        {
-            get { return "ExceptionType"; }
-        }
+        protected override string ExpectedExceptionProperty => "ExceptionType";
 
         /// <summary>
         /// Gets a list of attribute that should be duplicated from the
@@ -423,15 +348,8 @@ namespace Samples.Extensions.NUnit
         /// <summary>
         /// Gets the category attribute.
         /// </summary>
-        private TypeName CategoryAttribute
-        {
-            get
-            {
-                if (this._categoryAttribute == null)
-                    this._categoryAttribute = NUnitTestFrameworkMetadata.AttributeName("Category");
-                return this._categoryAttribute;
-            }
-        }
+        private TypeName CategoryAttribute => this._categoryAttribute ??
+                                              (this._categoryAttribute = NUnitTestFrameworkMetadata.AttributeName("Category"));
 
         /// <summary>
         /// Tries the get categories.
@@ -485,20 +403,11 @@ namespace Samples.Extensions.NUnit
         /// <summary>
         /// Gets a value indicating whether supports static test methods.
         /// </summary>
-        public override bool SupportsStaticTestMethods
-        {
-            get { return false; }
-        }
+        public override bool SupportsStaticTestMethods => false;
 
         /// <summary>
         /// Gets the assert method filters.
         /// </summary>
-        public override IIndexable<IAssertMethodFilter> AssertMethodFilters
-        {
-            get
-            {
-                return Indexable.One<IAssertMethodFilter>(NUnitAssertMethodFilter.Instance);
-            }
-        }
+        public override IIndexable<IAssertMethodFilter> AssertMethodFilters => Indexable.One<IAssertMethodFilter>(NUnitAssertMethodFilter.Instance);
     }
 }
