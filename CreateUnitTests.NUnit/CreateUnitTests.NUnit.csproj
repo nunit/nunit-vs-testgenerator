@@ -7,8 +7,8 @@
     <ProjectGuid>{9635AFF9-7554-434D-AA63-556313342E5A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Samples.Extensions.NUnit</RootNamespace>
-    <AssemblyName>Samples.Extensions.NUnit</AssemblyName>
+    <RootNamespace>TestGeneration.Extensions.NUnit</RootNamespace>
+    <AssemblyName>TestGeneration.Extensions.NUnit</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

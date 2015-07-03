@@ -9,13 +9,13 @@
 // <summary>The NUnitFrameworkProvider type.</summary>
 //---------------------------------------------------------------------
 
-namespace Microsoft.VisualStudio.TestPlatform.TestGeneration.Extensions.NUnit
-{
-    using System;
-    using System.ComponentModel.Composition;
-    using Microsoft.VisualStudio.TestPlatform.TestGeneration.Data;
-    using Microsoft.VisualStudio.TestPlatform.TestGeneration.Model;
+using System;
+using System.ComponentModel.Composition;
+using Microsoft.VisualStudio.TestPlatform.TestGeneration.Data;
+using Microsoft.VisualStudio.TestPlatform.TestGeneration.Model;
 
+namespace TestGeneration.Extensions.NUnit
+{
     /// <summary>
     /// The provider for the NUnit unit test framework.
     /// </summary>
@@ -38,17 +38,11 @@ namespace Microsoft.VisualStudio.TestPlatform.TestGeneration.Extensions.NUnit
         /// <summary>
         /// Gets the name of the provider.
         /// </summary>
-        public override string Name
-        {
-            get { return "NUnit"; }
-        }
+        public override string Name => "NUnit";
 
         /// <summary>
         /// Gets the name of the assembly.
         /// </summary>
-        public override string AssemblyName
-        {
-            get { return "nunit.framework"; }
-        }
+        public override string AssemblyName => "nunit.framework";
     }
 }

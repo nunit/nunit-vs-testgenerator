@@ -9,12 +9,12 @@
 // <summary>The NUnitUnitTestProjectManager type.</summary>
 //---------------------------------------------------------------------
 
-namespace Microsoft.VisualStudio.TestPlatform.TestGeneration.Extensions.NUnit
-{
-    using System;
-    using EnvDTE;
-    using Microsoft.VisualStudio.TestPlatform.TestGeneration.Model;
+using System;
+using EnvDTE;
+using Microsoft.VisualStudio.TestPlatform.TestGeneration.Model;
 
+namespace TestGeneration.Extensions.NUnit
+{
     /// <summary>
     /// A unit test project for NUnit unit tests.
     /// </summary>

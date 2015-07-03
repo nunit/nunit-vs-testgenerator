@@ -9,11 +9,11 @@
 // <summary>The NUnitUnitTestClassManager type.</summary>
 //---------------------------------------------------------------------
 
-namespace Microsoft.VisualStudio.TestPlatform.TestGeneration.Extensions.NUnit
-{
-    using Microsoft.VisualStudio.TestPlatform.TestGeneration.Data;
-    using Microsoft.VisualStudio.TestPlatform.TestGeneration.Model;
+using Microsoft.VisualStudio.TestPlatform.TestGeneration.Data;
+using Microsoft.VisualStudio.TestPlatform.TestGeneration.Model;
 
+namespace TestGeneration.Extensions.NUnit
+{
     /// <summary>
     /// A unit test class for NUnit unit tests.
     /// </summary>
@@ -32,25 +32,16 @@ namespace Microsoft.VisualStudio.TestPlatform.TestGeneration.Extensions.NUnit
         /// <summary>
         /// The attribute name for marking a class as a test class.
         /// </summary>
-        public override string TestClassAttribute
-        {
-            get { return "TestFixture"; }
-        }
+        public override string TestClassAttribute => "TestFixture";
 
         /// <summary>
         /// The attribute name for marking a method as a test.
         /// </summary>
-        public override string TestMethodAttribute
-        {
-            get { return "Test"; }
-        }
+        public override string TestMethodAttribute => "Test";
 
         /// <summary>
         /// The code to force a test failure.
         /// </summary>
-        public override string AssertionFailure
-        {
-            get { return "Assert.Fail()"; }
-        }
+        public override string AssertionFailure => "Assert.Fail()";
     }
 }

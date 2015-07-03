@@ -9,24 +9,18 @@
 // <summary>The NUnitSolutionManager type.</summary>
 //---------------------------------------------------------------------
 
-namespace Microsoft.VisualStudio.TestPlatform.TestGeneration.Extensions.NUnit
+using System;
+using EnvDTE;
+using EnvDTE80;
+using Microsoft.VisualStudio.TestPlatform.TestGeneration;
+using Microsoft.VisualStudio.TestPlatform.TestGeneration.Data;
+using Microsoft.VisualStudio.TestPlatform.TestGeneration.Logging;
+using Microsoft.VisualStudio.TestPlatform.TestGeneration.Model;
+using VSLangProj;
+using VSLangProj80;
+
+namespace TestGeneration.Extensions.NUnit
 {
-    using System;
-    using System.Threading.Tasks;
-
-    using EnvDTE;
-
-    using EnvDTE80;
-
-    using Microsoft.VisualStudio.TestPlatform.TestGeneration;
-    using Microsoft.VisualStudio.TestPlatform.TestGeneration.Data;
-    using Microsoft.VisualStudio.TestPlatform.TestGeneration.Logging;
-    using Microsoft.VisualStudio.TestPlatform.TestGeneration.Model;
-
-    using VSLangProj;
-
-    using VSLangProj80;
-
     /// <summary>
     /// A solution manager for NUnit unit tests.
     /// </summary>
