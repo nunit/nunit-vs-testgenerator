@@ -43,7 +43,7 @@ namespace Samples.Extensions.NUnit
         /// identify of the test framework
         /// </summary>
         /// <value></value>
-        public override string Name => "NUnit";
+        public override string Name => "NUnit2";
 
         /// <summary>
         /// Gets the assembly name of the framework main's assembly. This name is used
@@ -68,7 +68,7 @@ namespace Samples.Extensions.NUnit
         {
             get
             {
-                return Indexable.One(new ShortReferenceAssemblyName(ShortAssemblyName.FromName("Nunit"), "2.6.4", AssemblyReferenceType.NugetReference));
+                return Indexable.One(new ShortReferenceAssemblyName(ShortAssemblyName.FromName("NUnit"), "2.6.4", AssemblyReferenceType.NugetReference));
             }
         }
 
@@ -208,10 +208,7 @@ namespace Samples.Extensions.NUnit
         /// <value>
         /// 	<c>true</c> if [fixture set up tear down instance]; otherwise, <c>false</c>.
         /// </value>
-        public override bool FixtureSetupTeardownInstance
-        {
-            get { return true; }
-        }
+        public override bool FixtureSetupTeardownInstance => true;
 
         /// <summary>
         /// The _fixture attribute.

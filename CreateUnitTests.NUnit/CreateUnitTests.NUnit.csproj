@@ -58,7 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="NUnitFrameworkProvider.cs" />
-    <Compile Include="NUnitSolutionManager.cs" />
+    <Compile Include="NUnit2SolutionManager.cs" />
     <Compile Include="NUnitUnitTestClassManager.cs" />
     <Compile Include="NUnitUnitTestProjectManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
