@@ -20,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\Osiris.Extended.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -57,8 +58,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NUnit2FrameworkProvider.cs" />
     <Compile Include="NUnitFrameworkProvider.cs" />
     <Compile Include="NUnit2SolutionManager.cs" />
+    <Compile Include="NUnitSolutionManager.cs" />
     <Compile Include="NUnitUnitTestClassManager.cs" />
     <Compile Include="NUnitUnitTestProjectManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

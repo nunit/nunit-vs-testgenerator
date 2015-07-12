@@ -1,14 +1,3 @@
-﻿//---------------------------------------------------------------------
-// <copyright file="NUnitFrameworkProvider.cs" company="Microsoft">
-//     Copyright (c) Microsoft Corporation.  All rights reserved.
-//     THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
-//     OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
-//     LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR
-//     FITNESS FOR A PARTICULAR PURPOSE.
-// </copyright>
-// <summary>The NUnitFrameworkProvider type.</summary>
-//---------------------------------------------------------------------
-
 using System;
 using System.ComponentModel.Composition;
 using Microsoft.VisualStudio.TestPlatform.TestGeneration.Data;
@@ -20,7 +9,7 @@ namespace TestGeneration.Extensions.NUnit
     /// The provider for the NUnit 2 unit test framework.
     /// </summary>
     [Export(typeof(IFrameworkProvider))]
-    public class NUnitFrameworkProvider : FrameworkProviderBase
+    public class NUnit2FrameworkProvider : FrameworkProviderBase
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="NUnit2FrameworkProvider"/> class.
@@ -30,15 +19,15 @@ namespace TestGeneration.Extensions.NUnit
         /// <param name="naming">The naming object used to decide how projects, classes and methods are named and created.</param>
         /// <param name="directory">The directory object to use for directory operations.</param>
         [ImportingConstructor]
-        public NUnitFrameworkProvider(IServiceProvider serviceProvider, IConfigurationSettings configurationSettings, INaming naming, IDirectory directory)
-            : base(new NUnitSolutionManager(serviceProvider, naming, directory), new NUnitUnitTestProjectManager(serviceProvider, naming), new NUnitUnitTestClassManager(configurationSettings, naming))
+        public NUnit2FrameworkProvider(IServiceProvider serviceProvider, IConfigurationSettings configurationSettings, INaming naming, IDirectory directory)
+            : base(new NUnit2SolutionManager(serviceProvider, naming, directory), new NUnitUnitTestProjectManager(serviceProvider, naming), new NUnitUnitTestClassManager(configurationSettings, naming))
         {
         }
 
         /// <summary>
         /// Gets the name of the provider.
         /// </summary>
-        public override string Name => "NUnit";
+        public override string Name => "NUnit2";
 
         /// <summary>
         /// Gets the name of the assembly.

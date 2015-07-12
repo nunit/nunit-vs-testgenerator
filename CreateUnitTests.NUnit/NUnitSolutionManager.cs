@@ -1,14 +1,3 @@
-﻿//---------------------------------------------------------------------
-// <copyright file="NUnitSolutionManager.cs" company="Microsoft">
-//     Copyright (c) Microsoft Corporation.  All rights reserved.
-//     THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
-//     OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
-//     LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR
-//     FITNESS FOR A PARTICULAR PURPOSE.
-// </copyright>
-// <summary>The NUnitSolutionManager type.</summary>
-//---------------------------------------------------------------------
-
 using System;
 using EnvDTE;
 using EnvDTE80;
@@ -20,10 +9,7 @@ using VSLangProj80;
 
 namespace TestGeneration.Extensions.NUnit
 {
-    /// <summary>
-    /// A solution manager for NUnit unit tests.
-    /// </summary>
-    public class NUnit2SolutionManager : SolutionManagerBase
+    public class NUnitSolutionManager : SolutionManagerBase
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="NUnitSolutionManager"/> class.
@@ -31,7 +17,7 @@ namespace TestGeneration.Extensions.NUnit
         /// <param name="serviceProvider">The service provider to use to get the interfaces required.</param>
         /// <param name="naming">The naming object used to decide how projects, classes and methods are named and created.</param>
         /// <param name="directory">The directory object to use for directory operations.</param>
-        public NUnit2SolutionManager(IServiceProvider serviceProvider, INaming naming, IDirectory directory)
+        public NUnitSolutionManager(IServiceProvider serviceProvider, INaming naming, IDirectory directory)
             : base(serviceProvider, naming, directory)
         {
         }
@@ -48,20 +34,17 @@ namespace TestGeneration.Extensions.NUnit
                 throw new ArgumentNullException(nameof(unitTestProject));
             }
 
-            TraceLogger.LogInfo("NUnitSolutionManager.OnUnitTestProjectCreated: Adding reference to NUnit 2 assemblies through nuget.");
+            TraceLogger.LogInfo("NUnitSolutionManager.OnUnitTestProjectCreated: Adding reference to NUnit assemblies through nuget.");
 
             base.OnUnitTestProjectCreated(unitTestProject, sourceMethod);
-            EnsureNuGetReference(unitTestProject, "NUnit", "2.6.4");
+            this.EnsureNuGetReference(unitTestProject, "NUnit", "3.0.0-beta-2");
 
             var vsp = unitTestProject.Object as VSProject2;
-            if (vsp != null)
+            var reference = vsp?.References.Find(GlobalConstants.MSTestAssemblyName);
+            if (reference != null)
             {
-                var reference = vsp.References.Find(GlobalConstants.MSTestAssemblyName);
-                if (reference != null)
-                {
-                    TraceLogger.LogInfo("NUnitSolutionManager.OnUnitTestProjectCreated: Removing reference to {0}", reference.Name);
-                    reference.Remove();
-                }
+                TraceLogger.LogInfo("NUnitSolutionManager.OnUnitTestProjectCreated: Removing reference to {0}", reference.Name);
+                reference.Remove();
             }
         }
     }

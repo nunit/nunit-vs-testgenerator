@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="TestGeneration.Extensions.NUnit.113f61ed-a246-4431-809d-bcd393642488" Version="1.0" Language="en-US" Publisher="Company" />
-    <DisplayName>Package for Test Generation NUnit extensions</DisplayName>
-    <Description xml:space="preserve">Test Generation NUnit extensions</Description>
+    <Identity Id="TestGeneration.Extensions.NUnit.113f61ed-a246-4431-809d-bcd393642488" Version="1.0.0" Language="en-US" Publisher="Terje Sandstrom" />
+    <DisplayName>Test Generation NUnit extensions</DisplayName>
+    <Description xml:space="preserve">Test Generation NUnit extensions
+</Description>
+    <License>license.txt</License>
+    <Tags>unit testing, NUnit</Tags>
   </Metadata>
   <Installation>
     <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0]" />

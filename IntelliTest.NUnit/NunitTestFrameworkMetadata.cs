@@ -7,7 +7,7 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Samples.Extensions.NUnit
+namespace TestGeneration.Extensions.IntelliTest.NUnit
 {
     using Microsoft.ExtendedReflection.Metadata.Names;
     using Microsoft.ExtendedReflection.Utilities.Safe.Diagnostics;

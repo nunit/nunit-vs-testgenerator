@@ -1,9 +1,10 @@
-﻿namespace Samples.Extensions.NUnit
-{
-    using Microsoft.ExtendedReflection.Asserts;
-    using Microsoft.ExtendedReflection.Metadata;
-    using Microsoft.ExtendedReflection.Utilities.Safe.Diagnostics;
+﻿using Microsoft.ExtendedReflection.Asserts;
+using Microsoft.ExtendedReflection.Metadata;
+using Microsoft.ExtendedReflection.Utilities.Safe.Diagnostics;
 
+
+namespace TestGeneration.Extensions.IntelliTest.NUnit
+{
     /// <summary>
     /// The n unit assert method filer.
     /// </summary>
