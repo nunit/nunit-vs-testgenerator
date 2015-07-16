@@ -37,7 +37,7 @@ namespace TestGeneration.Extensions.NUnit
             TraceLogger.LogInfo("NUnitSolutionManager.OnUnitTestProjectCreated: Adding reference to NUnit assemblies through nuget.");
 
             base.OnUnitTestProjectCreated(unitTestProject, sourceMethod);
-            this.EnsureNuGetReference(unitTestProject, "NUnit", "3.0.0-beta-2");
+            this.EnsureNuGetReference(unitTestProject, "NUnit", "3.0.0-beta-3");
 
             var vsp = unitTestProject.Object as VSProject2;
             var reference = vsp?.References.Find(GlobalConstants.MSTestAssemblyName);

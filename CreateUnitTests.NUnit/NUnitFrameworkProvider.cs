@@ -23,7 +23,7 @@ namespace TestGeneration.Extensions.NUnit
     public class NUnitFrameworkProvider : FrameworkProviderBase
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="NUnit2FrameworkProvider"/> class.
+        /// Initializes a new instance of the <see cref="NUnitFrameworkProvider"/> class.
         /// </summary>
         /// <param name="serviceProvider">The service provider to use to get the interfaces required.</param>
         /// <param name="configurationSettings">The configuration settings object to be used to determine how the test method is generated.</param>

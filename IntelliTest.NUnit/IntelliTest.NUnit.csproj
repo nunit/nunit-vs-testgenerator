@@ -29,6 +29,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\Osiris.Extended.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ExtendedReflection">
@@ -53,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NUnit2TestFramework.cs" />
     <Compile Include="NUnitAssertMethodFilter.cs" />
     <Compile Include="NUnitTestFramework.cs" />
     <Compile Include="NUnitTestFrameworkMetadata.cs" />

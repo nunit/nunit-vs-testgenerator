@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="TestGeneration.Extensions.NUnit.113f61ed-a246-4431-809d-bcd393642488" Version="1.0.0" Language="en-US" Publisher="Terje Sandstrom" />
-    <DisplayName>Test Generation NUnit extensions</DisplayName>
-    <Description xml:space="preserve">Test Generation NUnit extensions
+    <Identity Id="TestGeneration.Extensions.NUnit.113f61ed-a246-4431-809d-bcd393642488" Version="0.9.0" Language="en-US" Publisher="Microsoft, NUnit.Org, Terje Sandstrom" />
+    <DisplayName>Test Generator NUnit extension</DisplayName>
+    <Description xml:space="preserve">Test Generator,  NUnit extensions for Visual Studio 2015.  
+Creates Unit tests and Initellitests with both NUnit 2.6.4 and NUnit 3 beta frameworks.
 </Description>
+    <MoreInfo>https://github.com/nunit/nunit-vs-testgenerator/wiki</MoreInfo>
     <License>license.txt</License>
+    <Icon>nunit3_32x32.png</Icon>
+    <PreviewImage>preview.jpg</PreviewImage>
     <Tags>unit testing, NUnit</Tags>
   </Metadata>
   <Installation>

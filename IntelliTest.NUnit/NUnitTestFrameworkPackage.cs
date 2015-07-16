@@ -11,7 +11,7 @@ using Microsoft.Pex.Framework.Packages;
 
 using TestGeneration.Extensions.IntelliTest.NUnit;
 
-[assembly: PexPackageType(typeof(NUnit2TestFrameworkPackage))]
+
 [assembly: PexPackageType(typeof(NUnitTestFrameworkPackage))]
 
 namespace TestGeneration.Extensions.IntelliTest.NUnit
@@ -22,28 +22,7 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
 
     using Microsoft.Pex.Framework.Packages;
 
-    /// <summary>
-    /// Extensions package for NUnit.
-    /// </summary>
-    public class Nunit2TestFrameworkPackageAttribute : PexPackageAttributeBase
-    {
-        protected override void Initialize(IEngine engine)
-        {
-            base.Initialize(engine);
-
-            var testFrameworkService = engine.GetService<IPexTestFrameworkManager>();
-            var host = testFrameworkService as IPexComponent;
-
-            testFrameworkService.AddTestFramework(new NUnit2TestFramework(host));
-        }
-
-        public override string Name => nameof(NUnit2TestFrameworkPackage);
-    }
-
-    [Nunit2TestFrameworkPackage]
-    static class NUnit2TestFrameworkPackage
-    {
-    }
+   
 
 
     public class NunitTestFrameworkPackageAttribute : PexPackageAttributeBase
@@ -56,7 +35,9 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
             var host = testFrameworkService as IPexComponent;
 
             testFrameworkService.AddTestFramework(new NUnitTestFramework(host));
+            testFrameworkService.AddTestFramework(new NUnit2TestFramework(host));
         }
+    
 
         public override string Name => nameof(NUnitTestFrameworkPackage);
     }

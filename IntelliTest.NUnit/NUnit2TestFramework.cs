@@ -1,43 +1,32 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="NUnitTestFramework.cs" company="Microsoft">
-//   Copyright (c) Microsoft Corporation. All rights reserved.
-// </copyright>
-// <summary>
-//   NUnit test framework
-// </summary>
-// --------------------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Reflection;
+using Microsoft.ExtendedReflection.Asserts;
+using Microsoft.ExtendedReflection.Collections;
+using Microsoft.ExtendedReflection.Metadata;
+using Microsoft.ExtendedReflection.Metadata.Names;
+using Microsoft.ExtendedReflection.Monitoring;
+using Microsoft.ExtendedReflection.Utilities;
+using Microsoft.ExtendedReflection.Utilities.Safe;
+using Microsoft.ExtendedReflection.Utilities.Safe.Diagnostics;
+using Microsoft.Pex.Engine.ComponentModel;
+using Microsoft.Pex.Engine.TestFrameworks;
 
 namespace TestGeneration.Extensions.IntelliTest.NUnit
 {
-    using System;
-    using System.Collections.Generic;
-    using System.IO;
-    using System.Reflection;
-
-    using Microsoft.ExtendedReflection.Asserts;
-    using Microsoft.ExtendedReflection.Collections;
-    using Microsoft.ExtendedReflection.Metadata;
-    using Microsoft.ExtendedReflection.Metadata.Names;
-    using Microsoft.ExtendedReflection.Monitoring;
-    using Microsoft.ExtendedReflection.Utilities;
-    using Microsoft.ExtendedReflection.Utilities.Safe;
-    using Microsoft.ExtendedReflection.Utilities.Safe.Diagnostics;
-    using Microsoft.Pex.Engine.ComponentModel;
-    using Microsoft.Pex.Engine.TestFrameworks;
-
-
     /// <summary>
     /// NUnit 2 test framework
     /// </summary>
     [Serializable]
-    sealed class NUnitTestFramework : AttributeBasedTestFrameworkBase
+    sealed class NUnit2TestFramework : AttributeBasedTestFrameworkBase
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="NUnitTestFramework"/> class.
+        /// Initializes a new instance of the <see cref="NUnit2TestFramework"/> class.
         /// </summary>
         /// <param name="host">
         /// </param>
-        public NUnitTestFramework(IPexComponent host)
+        public NUnit2TestFramework(IPexComponent host)
             : base(host)
         { }
 
@@ -45,7 +34,7 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
         /// identify of the test framework
         /// </summary>
         /// <value></value>
-        public override string Name => "NUnit";
+        public override string Name => "NUnit2";
 
         /// <summary>
         /// Gets the assembly name of the framework main's assembly. This name is used
@@ -63,7 +52,7 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
         /// <summary>
         /// The test framework references.
         /// </summary>
-        public override ICountable<ShortReferenceAssemblyName> References => Indexable.One(new ShortReferenceAssemblyName(ShortAssemblyName.FromName("NUnit"), "3.0.0-beta-3", AssemblyReferenceType.NugetReference));
+        public override ICountable<ShortReferenceAssemblyName> References => Indexable.One(new ShortReferenceAssemblyName(ShortAssemblyName.FromName("NUnit"), "2.6.4", AssemblyReferenceType.NugetReference));
 
         /// <summary>
         /// The _directory.
@@ -219,7 +208,7 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
         /// </summary>
         /// <value>The fixture set up attribute.</value>
         public override TypeName FixtureSetupAttribute => fixtureSetUpAttribute ??
-                                                          (fixtureSetUpAttribute = NUnitTestFrameworkMetadata.AttributeName("OneTimeSetUp"));
+                                                          (fixtureSetUpAttribute = NUnitTestFrameworkMetadata.AttributeName("TestFixtureSetUp"));
 
         /// <summary>
         /// The _fixture tear down attribute.
@@ -232,7 +221,7 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
         /// </summary>
         /// <value>The fixture tear down attribute.</value>
         public override TypeName FixtureTeardownAttribute => fixtureTearDownAttribute ??
-                                                             (fixtureTearDownAttribute = NUnitTestFrameworkMetadata.AttributeName("OneTimeTearDown"));
+                                                             (fixtureTearDownAttribute = NUnitTestFrameworkMetadata.AttributeName("TestFixtureTearDown"));
 
         /// <summary>
         /// The _set up attribute.
@@ -269,14 +258,8 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
         /// Gets the name of the test teardown attribute.
         /// </summary>
         /// <value>The tear down attribute.</value>
-        public override TypeName TeardownAttribute
-        {
-            get
-            {
-                return tearDownAttribute ??
-                       (tearDownAttribute = NUnitTestFrameworkMetadata.AttributeName("TearDown"));
-            }
-        }
+        public override TypeName TeardownAttribute => tearDownAttribute ??
+                                                      (tearDownAttribute = NUnitTestFrameworkMetadata.AttributeName("TearDown"));
 
         /// <summary>
         /// The _ignore attribute.
@@ -318,10 +301,10 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
         /// </returns>
         protected override IEnumerable<TypeName> GetSatelliteAttributeTypes()
         {
-            return Indexable.Array(CategoryAttribute,
-                NUnitTestFrameworkMetadata.AttributeName("Description"),
-                NUnitTestFrameworkMetadata.AttributeName("Explicit"),
-                NUnitTestFrameworkMetadata.AttributeName("Platform"),
+            return Indexable.Array(CategoryAttribute, 
+                NUnitTestFrameworkMetadata.AttributeName("Description"), 
+                NUnitTestFrameworkMetadata.AttributeName("Explicit"), 
+                NUnitTestFrameworkMetadata.AttributeName("Platform"), 
                 NUnitTestFrameworkMetadata.AttributeName("Property")
                 );
         }
@@ -350,7 +333,7 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
         /// <returns>
         /// The <see cref="bool"/>.
         /// </returns>
-        protected override bool TryGetCategories(ICustomAttributeProviderEx element, out IEnumerable<string> names)
+        protected override bool TryGetCategories( ICustomAttributeProviderEx element, out IEnumerable<string> names)
         {
             SafeDebug.AssumeNotNull(element, "element");
 
