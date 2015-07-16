@@ -4,7 +4,7 @@
     <Identity Id="TestGeneration.Extensions.NUnit.113f61ed-a246-4431-809d-bcd393642488" Version="0.9.0" Language="en-US" Publisher="Microsoft, NUnit.Org, Terje Sandstrom" />
     <DisplayName>Test Generator NUnit extension</DisplayName>
     <Description xml:space="preserve">Test Generator,  NUnit extensions for Visual Studio 2015.  
-Creates Unit tests and Initellitests with both NUnit 2.6.4 and NUnit 3 beta frameworks.
+Creates Unit tests and Intellitests with both NUnit 2.6.4 and NUnit 3 beta frameworks.
 </Description>
     <MoreInfo>https://github.com/nunit/nunit-vs-testgenerator/wiki</MoreInfo>
     <License>license.txt</License>
