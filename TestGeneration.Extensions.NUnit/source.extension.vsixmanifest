@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
-  <Metadata>
-    <Identity Id="TestGeneration.Extensions.NUnit.113f61ed-a246-4431-809d-bcd393642488" Version="0.9.0" Language="en-US" Publisher="Microsoft, NUnit.Org, Terje Sandstrom" />
-    <DisplayName>Test Generator NUnit extension</DisplayName>
-    <Description xml:space="preserve">Test Generator,  NUnit extensions for Visual Studio 2015.  
+    <Metadata>
+        <Identity Id="TestGeneration.Extensions.NUnit.113f61ed-a246-4431-809d-bcd393642488" Version="0.9.1" Language="en-US" Publisher="Microsoft, NUnit.Org, Terje Sandstrom" />
+        <DisplayName>Test Generator NUnit extension</DisplayName>
+        <Description xml:space="preserve">Test Generator,  NUnit extensions for Visual Studio 2015.  
 Creates Unit tests and Initellitests with both NUnit 2.6.4 and NUnit 3 beta frameworks.
 </Description>
-    <MoreInfo>https://github.com/nunit/nunit-vs-testgenerator/wiki</MoreInfo>
-    <License>license.txt</License>
-    <Icon>nunit3_32x32.png</Icon>
-    <PreviewImage>preview.jpg</PreviewImage>
-    <Tags>unit testing, NUnit</Tags>
-  </Metadata>
-  <Installation>
-    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0]" />
-  </Installation>
-  <Dependencies>
-    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
-  </Dependencies>
-  <Assets>
-    <Asset Type="Microsoft.VisualStudio.IntellitestExtension" d:Source="Project" d:ProjectName="IntelliTest.NUnit" Path="|IntelliTest.NUnit|" />
-    <Asset Type="Microsoft.VisualStudio.TestGenerationExtension" d:Source="Project" d:ProjectName="CreateUnitTests.NUnit" Path="|CreateUnitTests.NUnit|" />
-  </Assets>
+        <MoreInfo>https://github.com/nunit/nunit-vs-testgenerator/wiki</MoreInfo>
+        <License>license.txt</License>
+        <Icon>nunit3_32x32.png</Icon>
+        <PreviewImage>preview.jpg</PreviewImage>
+        <Tags>unit testing, NUnit, IntelliTest</Tags>
+    </Metadata>
+    <Installation>
+        <InstallationTarget Id="Microsoft.VisualStudio.Enterprise" Version="[14.0]" />
+    </Installation>
+    <Dependencies>
+        <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+    </Dependencies>
+    <Assets>
+        <Asset Type="Microsoft.VisualStudio.IntellitestExtension" d:Source="Project" d:ProjectName="IntelliTest.NUnit" Path="|IntelliTest.NUnit|" />
+        <Asset Type="Microsoft.VisualStudio.TestGenerationExtension" d:Source="Project" d:ProjectName="CreateUnitTests.NUnit" Path="|CreateUnitTests.NUnit|" />
+    </Assets>
 </PackageManifest>
