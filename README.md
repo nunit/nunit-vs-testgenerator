@@ -9,6 +9,13 @@ Please note that IntelliTest is only available in Visual
 Studio Enterprise edition. Other versions of Visual Studio 
 only have the `Create Unit Tests` menu option.
 
+##Download##
+
+You can download this extension in Visual Studio using **Tools | Extensions and Updates...**
+and searching for **Test Generator NUnit Extension**. You can also download from the 
+[Visual Studio Gallery](https://visualstudiogallery.msdn.microsoft.com/bd30bf3f-4183-4b00-a245-1875316b8cd3) 
+or from the [GitHub Releases Page](https://github.com/nunit/nunit-vs-testgenerator/releases).
+
 ##How to Use##
 
 For more information on using IntelliTest and this extension, please
