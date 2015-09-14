@@ -5,13 +5,9 @@ IntelliTest to allow you to create unit tests and IntelliTests.
 This extension extends the built in IntelliTest functionality allowing
 developers to generate tests using NUnit 2.6.x or NUnit 3.0.
 
-##Visual Studio Enterprise is Required##
-
-Please note that this extension does not generate the tests, it merely
-extends IntelliTest to allow it to generate tests using NUnit. Users
-should also be aware that **IntelliTest is only available in Visual
-Studio Enterprise edition.** Installing this extension in any other
-version of Visual Studio will do nothing.
+Please note that IntelliTest is only available in Visual
+Studio Enterprise edition. Other versions of Visual Studio 
+only have the `Create Unit Tests` menu option.
 
 ##How to Use##
 
