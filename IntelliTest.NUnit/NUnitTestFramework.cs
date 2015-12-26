@@ -32,6 +32,7 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
     [Serializable]
     sealed class NUnitTestFramework : AttributeBasedTestFrameworkBase
     {
+        private const string NUnitVersion = "3.0.1";
         /// <summary>
         /// Initializes a new instance of the <see cref="NUnitTestFramework"/> class.
         /// </summary>
@@ -63,7 +64,8 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
         /// <summary>
         /// The test framework references.
         /// </summary>
-        public override ICountable<ShortReferenceAssemblyName> References => Indexable.One(new ShortReferenceAssemblyName(ShortAssemblyName.FromName("NUnit"), "3.0.0-beta-3", AssemblyReferenceType.NugetReference));
+        public override ICountable<ShortReferenceAssemblyName> References => 
+            Indexable.One(new ShortReferenceAssemblyName(ShortAssemblyName.FromName("NUnit"), NUnitVersion, AssemblyReferenceType.NugetReference));
 
         /// <summary>
         /// The _directory.

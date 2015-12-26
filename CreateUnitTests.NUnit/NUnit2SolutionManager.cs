@@ -25,6 +25,7 @@ namespace TestGeneration.Extensions.NUnit
     /// </summary>
     public class NUnit2SolutionManager : SolutionManagerBase
     {
+        private const string NUnitVersion = "2.6.4";
         /// <summary>
         /// Initializes a new instance of the <see cref="NUnitSolutionManager"/> class.
         /// </summary>
@@ -51,17 +52,14 @@ namespace TestGeneration.Extensions.NUnit
             TraceLogger.LogInfo("NUnitSolutionManager.OnUnitTestProjectCreated: Adding reference to NUnit 2 assemblies through nuget.");
 
             base.OnUnitTestProjectCreated(unitTestProject, sourceMethod);
-            EnsureNuGetReference(unitTestProject, "NUnit", "2.6.4");
+            EnsureNuGetReference(unitTestProject, "NUnit", NUnitVersion);
 
             var vsp = unitTestProject.Object as VSProject2;
-            if (vsp != null)
+            var reference = vsp?.References.Find(GlobalConstants.MSTestAssemblyName);
+            if (reference != null)
             {
-                var reference = vsp.References.Find(GlobalConstants.MSTestAssemblyName);
-                if (reference != null)
-                {
-                    TraceLogger.LogInfo("NUnitSolutionManager.OnUnitTestProjectCreated: Removing reference to {0}", reference.Name);
-                    reference.Remove();
-                }
+                TraceLogger.LogInfo("NUnitSolutionManager.OnUnitTestProjectCreated: Removing reference to {0}", reference.Name);
+                reference.Remove();
             }
         }
     }
