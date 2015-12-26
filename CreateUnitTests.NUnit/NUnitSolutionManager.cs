@@ -11,6 +11,7 @@ namespace TestGeneration.Extensions.NUnit
 {
     public class NUnitSolutionManager : SolutionManagerBase
     {
+        private const string NUnit3Version = "3.0.1";
         /// <summary>
         /// Initializes a new instance of the <see cref="NUnitSolutionManager"/> class.
         /// </summary>
@@ -37,7 +38,7 @@ namespace TestGeneration.Extensions.NUnit
             TraceLogger.LogInfo("NUnitSolutionManager.OnUnitTestProjectCreated: Adding reference to NUnit assemblies through nuget.");
 
             base.OnUnitTestProjectCreated(unitTestProject, sourceMethod);
-            this.EnsureNuGetReference(unitTestProject, "NUnit", "3.0.0-beta-3");
+            this.EnsureNuGetReference(unitTestProject, "NUnit", NUnit3Version);
 
             var vsp = unitTestProject.Object as VSProject2;
             var reference = vsp?.References.Find(GlobalConstants.MSTestAssemblyName);

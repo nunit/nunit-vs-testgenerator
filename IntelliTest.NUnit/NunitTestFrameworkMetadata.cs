@@ -42,9 +42,9 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
                 name).SelfInstantiation;
         }
 
-        public static readonly TypeName AssertType = NUnitTestFrameworkMetadata.TypeName("Assert");
+        public static readonly TypeName AssertType = TypeName("Assert");
         public static readonly TypeDefinitionName AssertTypeDefinition = AssertType.Definition;
-        public static readonly TypeName CollectionAssertType = NUnitTestFrameworkMetadata.TypeName("CollectionAssert");
+        public static readonly TypeName CollectionAssertType = TypeName("CollectionAssert");
         public static readonly TypeDefinitionName CollectionAssertTypeDefinition = CollectionAssertType.Definition;
     }
 }

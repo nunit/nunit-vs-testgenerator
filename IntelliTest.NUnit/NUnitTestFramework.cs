@@ -68,7 +68,7 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
         /// <summary>
         /// The _directory.
         /// </summary>
-        private string directory = null;
+        private string directory;
 
         /// <summary>
         /// Hint on the location of the test framework assembly
@@ -269,14 +269,8 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
         /// Gets the name of the test teardown attribute.
         /// </summary>
         /// <value>The tear down attribute.</value>
-        public override TypeName TeardownAttribute
-        {
-            get
-            {
-                return tearDownAttribute ??
-                       (tearDownAttribute = NUnitTestFrameworkMetadata.AttributeName("TearDown"));
-            }
-        }
+        public override TypeName TeardownAttribute => tearDownAttribute ??
+                                                      (tearDownAttribute = NUnitTestFrameworkMetadata.AttributeName("TearDown"));
 
         /// <summary>
         /// The _ignore attribute.
@@ -330,7 +324,7 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
         /// The _category attribute.
         /// </summary>
         [NonSerialized]
-        TypeName categoryAttribute;
+        private TypeName categoryAttribute;
 
         /// <summary>
         /// Gets the category attribute.
