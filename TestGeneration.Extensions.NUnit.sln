@@ -11,6 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestGeneration.Extensions.N
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EA107D0F-7028-4FF8-B90C-E2C5DF4C62D2}"
 	ProjectSection(SolutionItems) = preProject
+		notice.md = notice.md
 		README.md = README.md
 	EndProjectSection
 EndProject

@@ -1,16 +1,15 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Package")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Test Generator NUnit extension")]
+[assembly: AssemblyDescription("Test Generator,  NUnit extensions for Visual Studio 2015.\nCreates Unit tests and Intellitests with both NUnit 2.6.4 and NUnit 3 frameworks.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Package")]
-[assembly: AssemblyCopyright("")]
+[assembly: AssemblyCompany("NUnit.org")]
+[assembly: AssemblyProduct("Test Generator NUnit extension")]
+[assembly: AssemblyCopyright("(c) 2015 NUnit, Charlie Pool")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

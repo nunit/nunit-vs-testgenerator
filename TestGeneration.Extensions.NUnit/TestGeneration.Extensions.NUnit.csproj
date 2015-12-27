@@ -49,10 +49,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="index.html" />
-    <Content Include="license.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
+    <Content Include="..\license.txt">
+      <Link>license.txt</Link>
     </Content>
     <Content Include="nunit3_32x32.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -62,7 +60,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="stylesheet.css" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CreateUnitTests.NUnit\CreateUnitTests.NUnit.csproj">
