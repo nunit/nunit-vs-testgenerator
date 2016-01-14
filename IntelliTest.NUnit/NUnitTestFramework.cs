@@ -1,12 +1,25 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="NUnitTestFramework.cs" company="Microsoft">
-//   Copyright (c) Microsoft Corporation. All rights reserved.
-// </copyright>
-// <summary>
-//   NUnit test framework
-// </summary>
-// --------------------------------------------------------------------------------------------------------------------
-
+﻿// ***********************************************************************
+// Copyright (c) 2015 Charlie Poole
+//
+// Permission is hereby granted, free of charge, to any person obtaining
+// a copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to
+// permit persons to whom the Software is furnished to do so, subject to
+// the following conditions:
+// 
+// The above copyright notice and this permission notice shall be
+// included in all copies or substantial portions of the Software.
+// 
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+// EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+// NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+// LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+// OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+// WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+// ***********************************************************************
 namespace TestGeneration.Extensions.IntelliTest.NUnit
 {
     using System;
@@ -32,6 +45,7 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
     [Serializable]
     sealed class NUnitTestFramework : AttributeBasedTestFrameworkBase
     {
+        private const string NUnitVersion = "3.0.1";
         /// <summary>
         /// Initializes a new instance of the <see cref="NUnitTestFramework"/> class.
         /// </summary>
@@ -63,12 +77,13 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
         /// <summary>
         /// The test framework references.
         /// </summary>
-        public override ICountable<ShortReferenceAssemblyName> References => Indexable.One(new ShortReferenceAssemblyName(ShortAssemblyName.FromName("NUnit"), "3.0.0-beta-3", AssemblyReferenceType.NugetReference));
+        public override ICountable<ShortReferenceAssemblyName> References => 
+            Indexable.One(new ShortReferenceAssemblyName(ShortAssemblyName.FromName("NUnit"), NUnitVersion, AssemblyReferenceType.NugetReference));
 
         /// <summary>
         /// The _directory.
         /// </summary>
-        private string directory = null;
+        private string directory;
 
         /// <summary>
         /// Hint on the location of the test framework assembly
@@ -269,14 +284,8 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
         /// Gets the name of the test teardown attribute.
         /// </summary>
         /// <value>The tear down attribute.</value>
-        public override TypeName TeardownAttribute
-        {
-            get
-            {
-                return tearDownAttribute ??
-                       (tearDownAttribute = NUnitTestFrameworkMetadata.AttributeName("TearDown"));
-            }
-        }
+        public override TypeName TeardownAttribute => tearDownAttribute ??
+                                                      (tearDownAttribute = NUnitTestFrameworkMetadata.AttributeName("TearDown"));
 
         /// <summary>
         /// The _ignore attribute.
@@ -330,7 +339,7 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
         /// The _category attribute.
         /// </summary>
         [NonSerialized]
-        TypeName categoryAttribute;
+        private TypeName categoryAttribute;
 
         /// <summary>
         /// Gets the category attribute.
