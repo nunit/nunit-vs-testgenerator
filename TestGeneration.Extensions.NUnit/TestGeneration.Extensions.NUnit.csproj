@@ -49,8 +49,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\license.txt">
-      <Link>license.txt</Link>
+    <Content Include="license.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="nunit3_32x32.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
