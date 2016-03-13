@@ -156,26 +156,6 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
         /// </returns>
         public override bool TryReadExpectedException(ICustomAttributeProviderEx target, out TypeEx exceptionType)
         {
-            var attribute = AttributeHelper.GetAttribute(target, ExpectedExceptionAttribute);
-            if (attribute != null)
-            {
-                var attributeType = attribute.GetType();
-
-                // read exception type using reflection.
-                var field = attributeType.GetField("expectedException", BindingFlags.NonPublic | BindingFlags.Instance);
-                if (field != null)
-                {
-                    var t = field.GetValue(attribute) as Type;
-                    bool isClass;
-                    if (t != null && ReflectionHelper.TryGetIsClass(t, out isClass) && isClass
-                        && !ReflectionHelper.ContainsGenericParameters(t))
-                    {
-                        exceptionType = MetadataFromReflection.GetType(t);
-                        return true;
-                    }
-                }
-            }
-
             exceptionType = null;
             return false;
         }
