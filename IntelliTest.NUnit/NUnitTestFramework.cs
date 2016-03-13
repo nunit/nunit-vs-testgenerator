@@ -45,7 +45,7 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
     [Serializable]
     sealed class NUnitTestFramework : AttributeBasedTestFrameworkBase
     {
-        private const string NUnitVersion = "3.0.1";
+        private const string NUnitVersion = "3.0.2";
         /// <summary>
         /// Initializes a new instance of the <see cref="NUnitTestFramework"/> class.
         /// </summary>
