@@ -20,6 +20,9 @@
 // OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 // ***********************************************************************
+
+using Microsoft.ExtendedReflection.Metadata.Builders;
+
 namespace TestGeneration.Extensions.IntelliTest.NUnit
 {
     using System;
@@ -45,7 +48,8 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
     [Serializable]
     sealed class NUnitTestFramework : AttributeBasedTestFrameworkBase
     {
-        private const string NUnitVersion = "3.0.2";
+        private const string NUnitVersion = "3.2.0";
+
         /// <summary>
         /// Initializes a new instance of the <see cref="NUnitTestFramework"/> class.
         /// </summary>
@@ -53,7 +57,8 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
         /// </param>
         public NUnitTestFramework(IPexComponent host)
             : base(host)
-        { }
+        {
+        }
 
         /// <summary>
         /// identify of the test framework
@@ -77,8 +82,9 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
         /// <summary>
         /// The test framework references.
         /// </summary>
-        public override ICountable<ShortReferenceAssemblyName> References => 
-            Indexable.One(new ShortReferenceAssemblyName(ShortAssemblyName.FromName("NUnit"), NUnitVersion, AssemblyReferenceType.NugetReference));
+        public override ICountable<ShortReferenceAssemblyName> References =>
+            Indexable.One(new ShortReferenceAssemblyName(ShortAssemblyName.FromName("NUnit"), NUnitVersion,
+                AssemblyReferenceType.NugetReference));
 
         /// <summary>
         /// The _directory.
@@ -132,15 +138,13 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
         /// <summary>
         /// The _expected exception attribute.
         /// </summary>
-        [NonSerialized]
-        TypeName expectedExceptionAttribute;
+        [NonSerialized] TypeName expectedExceptionAttribute;
 
         /// <summary>
         /// Gets the ExpectedException attribute.
         /// </summary>
         /// <value>The expected exception attribute.</value>
-        public override TypeName ExpectedExceptionAttribute => expectedExceptionAttribute ??
-                                                               (expectedExceptionAttribute = NUnitTestFrameworkMetadata.AttributeName("ExpectedException"));
+        public override TypeName ExpectedExceptionAttribute => null;
 
         /// <summary>
         /// Tries the read expected exception.
@@ -175,7 +179,8 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
         /// <returns>
         /// The <see cref="bool"/>.
         /// </returns>
-        public override bool TryGetAssemblySetupTeardownMethods(AssemblyEx assembly, out Method setUp, out Method tearDown)
+        public override bool TryGetAssemblySetupTeardownMethods(AssemblyEx assembly, out Method setUp,
+            out Method tearDown)
         {
             setUp = null;
             tearDown = null;
@@ -193,47 +198,47 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
         /// <summary>
         /// The _fixture attribute.
         /// </summary>
-        [NonSerialized]
-        TypeName fixtureAttribute;
+        [NonSerialized] TypeName fixtureAttribute;
 
         /// <summary>
         /// Gets the name of the fixture attribute
         /// </summary>
         /// <value>The fixture attribute.</value>
         public override TypeName FixtureAttribute => fixtureAttribute ??
-                                                     (fixtureAttribute = NUnitTestFrameworkMetadata.AttributeName("TestFixture"));
+                                                     (fixtureAttribute =
+                                                         NUnitTestFrameworkMetadata.AttributeName("TestFixture"));
 
         /// <summary>
         /// The _fixture set up attribute.
         /// </summary>
-        [NonSerialized]
-        TypeName fixtureSetUpAttribute;
+        [NonSerialized] TypeName fixtureSetUpAttribute;
 
         /// <summary>
         /// Gets the name of the fixture setup attribute
         /// </summary>
         /// <value>The fixture set up attribute.</value>
         public override TypeName FixtureSetupAttribute => fixtureSetUpAttribute ??
-                                                          (fixtureSetUpAttribute = NUnitTestFrameworkMetadata.AttributeName("OneTimeSetUp"));
+                                                          (fixtureSetUpAttribute =
+                                                              NUnitTestFrameworkMetadata.AttributeName("OneTimeSetUp"));
 
         /// <summary>
         /// The _fixture tear down attribute.
         /// </summary>
-        [NonSerialized]
-        TypeName fixtureTearDownAttribute;
+        [NonSerialized] TypeName fixtureTearDownAttribute;
 
         /// <summary>
         /// Gets the name of the fixture teardown attribute
         /// </summary>
         /// <value>The fixture tear down attribute.</value>
         public override TypeName FixtureTeardownAttribute => fixtureTearDownAttribute ??
-                                                             (fixtureTearDownAttribute = NUnitTestFrameworkMetadata.AttributeName("OneTimeTearDown"));
+                                                             (fixtureTearDownAttribute =
+                                                                 NUnitTestFrameworkMetadata.AttributeName(
+                                                                     "OneTimeTearDown"));
 
         /// <summary>
         /// The _set up attribute.
         /// </summary>
-        [NonSerialized]
-        TypeName setUpAttribute;
+        [NonSerialized] TypeName setUpAttribute;
 
         /// <summary>
         /// Gets the name of the test setup attribute.
@@ -245,40 +250,40 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
         /// <summary>
         /// The _test attribute.
         /// </summary>
-        [NonSerialized]
-        TypeName testAttribute;
+        [NonSerialized] TypeName testAttribute;
 
         /// <summary>
         /// Gets the name of the test attribute.
         /// </summary>
         /// <value>The set up attribute.</value>
-        public override TypeName TestAttribute => testAttribute ?? (testAttribute = NUnitTestFrameworkMetadata.AttributeName("Test"));
+        public override TypeName TestAttribute
+            => testAttribute ?? (testAttribute = NUnitTestFrameworkMetadata.AttributeName("Test"));
 
         /// <summary>
         /// The _tear down attribute.
         /// </summary>
-        [NonSerialized]
-        TypeName tearDownAttribute;
+        [NonSerialized] TypeName tearDownAttribute;
 
         /// <summary>
         /// Gets the name of the test teardown attribute.
         /// </summary>
         /// <value>The tear down attribute.</value>
         public override TypeName TeardownAttribute => tearDownAttribute ??
-                                                      (tearDownAttribute = NUnitTestFrameworkMetadata.AttributeName("TearDown"));
+                                                      (tearDownAttribute =
+                                                          NUnitTestFrameworkMetadata.AttributeName("TearDown"));
 
         /// <summary>
         /// The _ignore attribute.
         /// </summary>
-        [NonSerialized]
-        TypeName ignoreAttribute;
+        [NonSerialized] TypeName ignoreAttribute;
 
         /// <summary>
         /// Gets the ignore attribute.
         /// </summary>
         /// <value>The ignore attribute.</value>
         public override TypeName IgnoreAttribute => ignoreAttribute ??
-                                                    (ignoreAttribute = NUnitTestFrameworkMetadata.AttributeName("Ignore"));
+                                                    (ignoreAttribute =
+                                                        NUnitTestFrameworkMetadata.AttributeName("Ignore"));
 
         /// <summary>
         /// Whether the ignore attribute constructor takes a message as its first argument.
@@ -318,14 +323,14 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
         /// <summary>
         /// The _category attribute.
         /// </summary>
-        [NonSerialized]
-        private TypeName categoryAttribute;
+        [NonSerialized] private TypeName categoryAttribute;
 
         /// <summary>
         /// Gets the category attribute.
         /// </summary>
         private TypeName CategoryAttribute => categoryAttribute ??
-                                              (categoryAttribute = NUnitTestFrameworkMetadata.AttributeName("Category"));
+                                              (categoryAttribute = NUnitTestFrameworkMetadata.AttributeName("Category"))
+            ;
 
         /// <summary>
         /// Tries the get categories.
@@ -351,26 +356,18 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
         /// <summary>
         /// The _assertion exception type.
         /// </summary>
-        [NonSerialized]
-        TypeName assertionExceptionType;
+        [NonSerialized] TypeName assertionExceptionType;
 
         /// <summary>
         /// Gets the type of the assertion exception.
         /// </summary>
         /// <value>The type of the assertion exception.</value>
-        public override TypeName AssertionExceptionType
-        {
-            get
-            {
-                System.Diagnostics.Debugger.Launch();
-                return assertionExceptionType ?? (assertionExceptionType = TypeDefinitionName.FromName(
-                    NUnitTestFrameworkMetadata.AssemblyName,
-                    -1,
-                    false,
-                    NUnitTestFrameworkMetadata.RootNamespace,
-                    "AssertionException").SelfInstantiation);
-            }
-        }
+        public override TypeName AssertionExceptionType => assertionExceptionType ?? (assertionExceptionType = TypeDefinitionName.FromName(
+            NUnitTestFrameworkMetadata.AssemblyName,
+            -1,
+            false,
+            NUnitTestFrameworkMetadata.RootNamespace,
+            "AssertionException").SelfInstantiation);
 
         /// <summary>
         /// Gets a value indicating whether supports static test methods.
@@ -380,6 +377,17 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
         /// <summary>
         /// Gets the assert method filters.
         /// </summary>
-        public override IIndexable<IAssertMethodFilter> AssertMethodFilters => Indexable.One<IAssertMethodFilter>(NUnitAssertMethodFilter.Instance);
+        public override IIndexable<IAssertMethodFilter> AssertMethodFilters
+            => Indexable.One<IAssertMethodFilter>(NUnitAssertMethodFilter.Instance);
+
+
+        public override bool TryMarkExpectedException(VisibilityContext visibility, MethodDefinitionBuilder method,
+            Exception exception)
+        {
+            SafeDebug.AssumeNotNull(visibility, "visibility");
+            SafeDebug.AssumeNotNull(method, "method");
+            SafeDebug.AssumeNotNull(exception, "exception");
+            return false;
+        }
     }
 }

@@ -376,19 +376,12 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
         /// Gets the type of the assertion exception.
         /// </summary>
         /// <value>The type of the assertion exception.</value>
-        public override TypeName AssertionExceptionType
-        {
-            get
-            {
-                System.Diagnostics.Debugger.Launch();
-                return assertionExceptionType ?? (assertionExceptionType = TypeDefinitionName.FromName(
-                    NUnitTestFrameworkMetadata.AssemblyName,
-                    -1,
-                    false,
-                    NUnitTestFrameworkMetadata.RootNamespace,
-                    "AssertionException").SelfInstantiation);
-            }
-        }
+        public override TypeName AssertionExceptionType => assertionExceptionType ?? (assertionExceptionType = TypeDefinitionName.FromName(
+            NUnitTestFrameworkMetadata.AssemblyName,
+            -1,
+            false,
+            NUnitTestFrameworkMetadata.RootNamespace,
+            "AssertionException").SelfInstantiation);
 
         /// <summary>
         /// Gets a value indicating whether supports static test methods.

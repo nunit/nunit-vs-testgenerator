@@ -33,7 +33,7 @@ namespace TestGeneration.Extensions.NUnit
 {
     public class NUnitSolutionManager : SolutionManagerBase
     {
-        private const string NUnit3Version = "3.0.1";
+        private const string NUnit3Version = "3.2.0";
         /// <summary>
         /// Initializes a new instance of the <see cref="NUnitSolutionManager"/> class.
         /// </summary>
