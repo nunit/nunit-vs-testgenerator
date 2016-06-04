@@ -43,7 +43,7 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
 
 
     /// <summary>
-    /// NUnit 2 test framework
+    /// NUnit 3 test framework
     /// </summary>
     [Serializable]
     sealed class NUnitTestFramework : AttributeBasedTestFrameworkBase
