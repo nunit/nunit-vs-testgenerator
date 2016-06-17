@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="TestGeneration.Extensions.NUnit.113f61ed-a246-4431-809d-bcd393642489" Version="1.1.0" Language="en-US" Publisher="NUnit.Org" />
+    <Identity Id="TestGeneration.Extensions.NUnit.B0072007-9EC6-4DE4-AF31-8FDF77DFBB76" Version="1.1.0" Language="en-US" Publisher="NUnit.Org" />
     <DisplayName>Test Generator NUnit extension for VS15</DisplayName>
-    <Description xml:space="preserve">Test Generator,  NUnit extensions for Visual Studio 2015.  
+    <Description xml:space="preserve">Test Generator,  NUnit extensions for Visual Studio 15 (Preview).  
 Creates Unit tests and Intellitests with both NUnit 2.6.4 and NUnit 3 frameworks.
 </Description>
     <MoreInfo>https://github.com/nunit/nunit-vs-testgenerator/wiki</MoreInfo>

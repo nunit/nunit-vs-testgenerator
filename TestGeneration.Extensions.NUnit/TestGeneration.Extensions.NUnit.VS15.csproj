@@ -20,7 +20,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TestGeneration.Extensions.NUnit</RootNamespace>
-    <AssemblyName>TestGeneration.Extensions.NUnit</AssemblyName>
+    <AssemblyName>TestGeneration.Extensions.NUnit.VS15</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <GeneratePkgDefFile>false</GeneratePkgDefFile>
     <IncludeAssemblyInVSIXContainer>false</IncludeAssemblyInVSIXContainer>

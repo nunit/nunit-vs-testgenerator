@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateUnitTests.NUnit", "Cr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntelliTest.NUnit", "IntelliTest.NUnit\IntelliTest.NUnit.csproj", "{9B87DC9E-151C-4F94-959F-657BBF72645F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestGeneration.Extensions.NUnit", "TestGeneration.Extensions.NUnit\TestGeneration.Extensions.NUnit.csproj", "{A773B258-30DD-4698-8601-ECC742A712DC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestGeneration.Extensions.NUnit.VS15", "TestGeneration.Extensions.NUnit\TestGeneration.Extensions.NUnit.VS15.csproj", "{A773B258-30DD-4698-8601-ECC742A712DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
