@@ -46,16 +46,16 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
     /// NUnit 3 test framework
     /// </summary>
     [Serializable]
-    sealed class NUnitTestFramework : AttributeBasedTestFrameworkBase
+    sealed class NUnit3TestFramework : AttributeBasedTestFrameworkBase
     {
         private const string NUnitVersion = "3.2.0";
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="NUnitTestFramework"/> class.
+        /// Initializes a new instance of the <see cref="NUnit3TestFramework"/> class.
         /// </summary>
         /// <param name="host">
         /// </param>
-        public NUnitTestFramework(IPexComponent host)
+        public NUnit3TestFramework(IPexComponent host)
             : base(host)
         {
         }
@@ -64,7 +64,7 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
         /// identify of the test framework
         /// </summary>
         /// <value></value>
-        public override string Name => "NUnit";
+        public override string Name => "NUnit3";
 
         /// <summary>
         /// Gets the assembly name of the framework main's assembly. This name is used

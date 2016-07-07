@@ -31,16 +31,16 @@ using VSLangProj80;
 
 namespace TestGeneration.Extensions.NUnit
 {
-    public class NUnitSolutionManager : SolutionManagerBase
+    public class NUnit3SolutionManager : SolutionManagerBase
     {
         private const string NUnit3Version = "3.2.0";
         /// <summary>
-        /// Initializes a new instance of the <see cref="NUnitSolutionManager"/> class.
+        /// Initializes a new instance of the <see cref="NUnit3SolutionManager"/> class.
         /// </summary>
         /// <param name="serviceProvider">The service provider to use to get the interfaces required.</param>
         /// <param name="naming">The naming object used to decide how projects, classes and methods are named and created.</param>
         /// <param name="directory">The directory object to use for directory operations.</param>
-        public NUnitSolutionManager(IServiceProvider serviceProvider, INaming naming, IDirectory directory)
+        public NUnit3SolutionManager(IServiceProvider serviceProvider, INaming naming, IDirectory directory)
             : base(serviceProvider, naming, directory)
         {
         }

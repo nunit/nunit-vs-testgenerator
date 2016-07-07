@@ -39,7 +39,7 @@ namespace TestGeneration.Extensions.NUnit
     {
         private const string NUnitVersion = "2.6.4";
         /// <summary>
-        /// Initializes a new instance of the <see cref="NUnitSolutionManager"/> class.
+        /// Initializes a new instance of the <see cref="NUnit2SolutionManager"/> class.
         /// </summary>
         /// <param name="serviceProvider">The service provider to use to get the interfaces required.</param>
         /// <param name="naming">The naming object used to decide how projects, classes and methods are named and created.</param>
