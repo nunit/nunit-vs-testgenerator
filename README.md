@@ -16,15 +16,6 @@ and searching for **Test Generator NUnit Extension**. You can also download from
 [Visual Studio Gallery](https://visualstudiogallery.msdn.microsoft.com/bd30bf3f-4183-4b00-a245-1875316b8cd3) 
 or from the [GitHub Releases Page](https://github.com/nunit/nunit-vs-testgenerator/releases).
 
-##How to Use##
+##Documentation##
 
-For more information on using IntelliTest and this extension, please
-see the [Microsoft documentation](https://msdn.microsoft.com/en-us/library/dn823749.aspx).
-
-###Right-Click to Create Tests###
-
-![Right-Click to Create Tests](https://i-msdn.sec.s-msft.com/dynimg/IC820614.png)
-
-###Select NUnit from the Test Framework dropdown###
-
-![Selecting NUnit](https://i-msdn.sec.s-msft.com/dynimg/IC820617.png)
+Documentation and a Quick Start Guide can be found on the [NUnit Documentation Wiki](https://github.com/nunit/docs/wiki).

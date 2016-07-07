@@ -6,7 +6,7 @@
     <Description xml:space="preserve">Test Generator,  NUnit extensions for Visual Studio 2015.  
 Creates Unit tests and Intellitests with both NUnit 2.6.4 and NUnit 3 frameworks.
 </Description>
-    <MoreInfo>https://github.com/nunit/nunit-vs-testgenerator/wiki</MoreInfo>
+    <MoreInfo>https://github.com/nunit/nunit-vs-testgenerator</MoreInfo>
     <License>license.txt</License>
     <Icon>nunit3_32x32.png</Icon>
     <PreviewImage>preview.jpg</PreviewImage>
