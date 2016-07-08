@@ -28,7 +28,7 @@ using Microsoft.ExtendedReflection.Utilities.Safe.Diagnostics;
 namespace TestGeneration.Extensions.IntelliTest.NUnit
 {
     /// <summary>
-    /// The n unit assert method filer.
+    /// The NUnit assert method filer.
     /// </summary>
     internal sealed class NUnitAssertMethodFilter : IAssertMethodFilter
     {

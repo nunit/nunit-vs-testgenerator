@@ -48,7 +48,7 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
             var testFrameworkService = engine.GetService<IPexTestFrameworkManager>();
             var host = testFrameworkService as IPexComponent;
 
-            testFrameworkService.AddTestFramework(new NUnitTestFramework(host));
+            testFrameworkService.AddTestFramework(new NUnit3TestFramework(host));
             testFrameworkService.AddTestFramework(new NUnit2TestFramework(host));
         }
     

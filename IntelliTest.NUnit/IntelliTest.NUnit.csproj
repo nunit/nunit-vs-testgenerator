@@ -56,7 +56,7 @@
   <ItemGroup>
     <Compile Include="NUnit2TestFramework.cs" />
     <Compile Include="NUnitAssertMethodFilter.cs" />
-    <Compile Include="NUnitTestFramework.cs" />
+    <Compile Include="NUnit3TestFramework.cs" />
     <Compile Include="NUnitTestFrameworkMetadata.cs" />
     <Compile Include="NUnitTestFrameworkPackage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
