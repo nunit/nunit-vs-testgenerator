@@ -18,4 +18,4 @@ or from the [GitHub Releases Page](https://github.com/nunit/nunit-vs-testgenerat
 
 ##Documentation##
 
-Documentation and a Quick Start Guide can be found on the [NUnit Documentation Wiki](https://github.com/nunit/docs/wiki).
+Documentation and a Quick Start Guide can be found on the [NUnit Documentation Wiki](https://github.com/nunit/docs/wiki/Visual-Studio-Test-Generator).
