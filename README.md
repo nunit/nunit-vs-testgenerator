@@ -1,12 +1,13 @@
 # NUnit Visual Studio 2015 Test Generator
 
-This is an extension for Visual Studio 2015 that extends
+This is an extension for Visual Studio that extends
 the test functionality to allow you to create unit tests and IntelliTests.
+It works for Visual Studio versions from 2015 and above. 
 This extension extends the built in test generator functionality allowing
 developers to generate tests using NUnit 2.6.x or NUnit 3.0.
 
 Please note that IntelliTest is only available in Visual
-Studio Enterprise edition. Other versions of Visual Studio 
+Studio Enterprise edition. Other editions of Visual Studio 
 only have the `Create Unit Tests` menu option.
 
 ##Download##
