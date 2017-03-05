@@ -9,6 +9,7 @@ Creates Unit tests and Intellitests with both NUnit 2.6.4 and NUnit 3 frameworks
     <MoreInfo>https://github.com/nunit/nunit-vs-testgenerator</MoreInfo>
     <License>license.txt</License>
     <GettingStartedGuide>https://github.com/nunit/docs/wiki/Visual-Studio-Test-Generator</GettingStartedGuide>
+    <ReleaseNotes>https://github.com/nunit/docs/wiki/TestGenerator-Release-Notes-VS2015</ReleaseNotes>
     <Icon>nunit_90.png</Icon>
     <PreviewImage>preview.jpg</PreviewImage>
     <Tags>unit testing, NUnit</Tags>
