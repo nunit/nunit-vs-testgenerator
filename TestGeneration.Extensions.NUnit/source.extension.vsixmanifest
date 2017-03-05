@@ -10,6 +10,7 @@ Works on Visual Studio from version 2017.
     <MoreInfo>https://github.com/nunit/nunit-vs-testgenerator</MoreInfo>
     <License>license.txt</License>
     <GettingStartedGuide>https://github.com/nunit/docs/wiki/Visual-Studio-Test-Generator</GettingStartedGuide>
+    <ReleaseNotes>https://github.com/nunit/docs/wiki/TestGenerator-Release-Notes</ReleaseNotes>
     <Icon>nunit_90.png</Icon>
     <PreviewImage>preview.jpg</PreviewImage>
     <Tags>unit testing, NUnit</Tags>
