@@ -206,3 +206,66 @@ FakesAssemblies/
 
 # Visual Studio 6 workspace options file
 *.opt
+##
+## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
+*.vcxproj.filters
+[Ll]og/
+# Visual Studio 2015 cache/options directory
+# Uncomment if you have tasks that create the project's static files in wwwroot
+#wwwroot/
+project.fragment.lock.json
+**/Properties/launchSettings.json
+*.opendb
+*.VC.db
+*.VC.VC.opendb
+*.sap
+# Visual Studio code coverage results
+*.coverage
+*.coveragexml
+nCrunchTemp_*
+# TODO: Comment the next line if you want to checkin your web deploy settings
+# Microsoft Azure Web App publish settings. Comment the next line if you want to
+# checkin your Azure Web App publish settings, but sensitive information contained
+# in these scripts will be unencrypted
+PublishScripts/
+# NuGet v3's project.json files produces more ignoreable files
+*.nuget.props
+*.nuget.targets
+# Microsoft Azure Build Output
+# Microsoft Azure Emulator
+ecf/
+rcf/
+# Windows Store app package directories and files
+BundleArtifacts/
+Package.StoreAssociation.xml
+_pkginfo.txt
+*.jfm
+# Since there are multiple workflows, uncomment next line to ignore bower_components
+# (https://github.com/github/gitignore/pull/1529#issuecomment-104372622)
+#bower_components/
+# GhostDoc plugin setting file
+*.GhostDoc.xml
+# Visual Studio 6 auto-generated workspace file (contains which files were open etc.)
+*.vbw
+# Visual Studio LightSwitch build output
+**/*.HTMLClient/GeneratedArtifacts
+**/*.DesktopClient/GeneratedArtifacts
+**/*.DesktopClient/ModelManifest.xml
+**/*.Server/GeneratedArtifacts
+**/*.Server/ModelManifest.xml
+_Pvt_Extensions
+# Paket dependency manager
+.paket/paket.exe
+paket-files/
+# FAKE - F# Make
+.fake/
+# JetBrains Rider
+.idea/
+*.sln.iml
+# CodeRush
+.cr/
+# Python Tools for Visual Studio (PTVS)
+__pycache__/
+*.pyc
+# Cake - Uncomment if you are using it
+# tools/
