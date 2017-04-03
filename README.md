@@ -12,7 +12,7 @@ only have the `Create Unit Tests` menu option.
 
 Also note that there are seperate versions for VS 2015 and VS 2017
 
-##Download##
+## Download
 
 You can download this extension in Visual Studio using **Tools | Extensions and Updates...**
 and searching for **Test Generator NUnit Extension**. 
@@ -26,6 +26,6 @@ or from the [GitHub Releases Page](https://github.com/nunit/nunit-vs-testgenerat
 For VS 2017:
 
 
-##Documentation##
+## Documentation
 
 Documentation and a Quick Start Guide can be found on the [NUnit Documentation Wiki](https://github.com/nunit/docs/wiki/Visual-Studio-Test-Generator).
