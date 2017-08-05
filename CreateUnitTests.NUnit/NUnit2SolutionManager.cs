@@ -38,6 +38,7 @@ namespace TestGeneration.Extensions.NUnit
     public class NUnit2SolutionManager : SolutionManagerBase
     {
         private const string NUnitVersion = "2.6.4";
+        private const string NUnitTestAdapterVersion = "2.1.1";
         /// <summary>
         /// Initializes a new instance of the <see cref="NUnit2SolutionManager"/> class.
         /// </summary>
@@ -65,6 +66,7 @@ namespace TestGeneration.Extensions.NUnit
 
             base.OnUnitTestProjectCreated(unitTestProject, sourceMethod);
             EnsureNuGetReference(unitTestProject, "NUnit", NUnitVersion);
+            EnsureNuGetReference(unitTestProject, "NUnitTestAdapter", NUnitTestAdapterVersion);
 
             var vsp = unitTestProject.Object as VSProject2;
             var reference = vsp?.References.Find(GlobalConstants.MSTestAssemblyName);
