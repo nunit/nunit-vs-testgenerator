@@ -33,7 +33,6 @@ namespace TestGeneration.Extensions.NUnit
 {
     public class NUnit3SolutionManager : SolutionManagerBase
     {
-        private const string NUnitTestAdapterVersion = "3.8";
         /// <summary>
         /// Initializes a new instance of the <see cref="NUnit3SolutionManager"/> class.
         /// </summary>
@@ -61,7 +60,7 @@ namespace TestGeneration.Extensions.NUnit
 
             base.OnUnitTestProjectCreated(unitTestProject, sourceMethod);
             this.EnsureNuGetReference(unitTestProject, "NUnit", null);
-            this.EnsureNuGetReference(unitTestProject, "NUnit3TestAdapter", NUnitTestAdapterVersion);
+            this.EnsureNuGetReference(unitTestProject, "NUnit3TestAdapter", null);
 
             var vsp = unitTestProject.Object as VSProject2;
             var reference = vsp?.References.Find(GlobalConstants.MSTestAssemblyName);
