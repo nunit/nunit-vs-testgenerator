@@ -60,6 +60,7 @@ namespace TestGeneration.Extensions.NUnit
 
             base.OnUnitTestProjectCreated(unitTestProject, sourceMethod);
             this.EnsureNuGetReference(unitTestProject, "NUnit", null);
+            this.EnsureNuGetReference(unitTestProject, "NUnit3TestAdapter", null);
 
             var vsp = unitTestProject.Object as VSProject2;
             var reference = vsp?.References.Find(GlobalConstants.MSTestAssemblyName);
