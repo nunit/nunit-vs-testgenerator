@@ -30,3 +30,5 @@ For VS 2017:
 ## Documentation
 
 Documentation and a Quick Start Guide can be found on the [NUnit Documentation Wiki](https://github.com/nunit/docs/wiki/Visual-Studio-Test-Generator).
+
+Release notes can be found at [NUnit TestGenerator Release Notes](https://github.com/nunit/docs/wiki/TestGenerator-Release-Notes)
