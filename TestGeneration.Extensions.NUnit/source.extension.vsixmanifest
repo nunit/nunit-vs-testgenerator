@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="TestGeneration.Extensions.NUnit.113f61ed-a246-4431-809d-bcd393642599" Version="2.1" Language="en-US" Publisher="Terje Sandstrom" />
+        <Identity Id="TestGeneration.Extensions.NUnit.113f61ed-a246-4431-809d-bcd393642599" Version="2.2" Language="en-US" Publisher="Terje Sandstrom" />
         <DisplayName>Test Generator NUnit extension</DisplayName>
         <Description xml:space="preserve">Test Generator,  NUnit extensions for Visual Studio.
 Creates Unit tests and Intellitests with both NUnit 2.6.4 and NUnit 3 frameworks.
@@ -16,7 +16,7 @@ Works on Visual Studio from version 2017.
         <Tags>unit testing, NUnit</Tags>
     </Metadata>
     <Installation>
-        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0,16.0)" />
+        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0,17.0)" />
     </Installation>
     <Dependencies>
         <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
@@ -26,6 +26,6 @@ Works on Visual Studio from version 2017.
         <Asset Type="Microsoft.VisualStudio.TestGenerationExtension" d:Source="Project" d:ProjectName="CreateUnitTests.NUnit" Path="|CreateUnitTests.NUnit|" />
     </Assets>
     <Prerequisites>
-        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0.25904.2,16.0)" DisplayName="Visual Studio core editor" />
+        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0,)" DisplayName="Visual Studio core editor" />
     </Prerequisites>
 </PackageManifest>
