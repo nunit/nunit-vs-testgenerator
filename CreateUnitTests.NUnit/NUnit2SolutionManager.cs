@@ -1,5 +1,5 @@
 ﻿// ***********************************************************************
-// Copyright (c) 2015-2018 Terje Sandstrom
+// Copyright (c) 2015-2020 Terje Sandstrom
 //
 // Permission is hereby granted, free of charge, to any person obtaining
 // a copy of this software and associated documentation files (the
@@ -37,8 +37,8 @@ namespace TestGeneration.Extensions.NUnit
     /// </summary>
     public class NUnit2SolutionManager : SolutionManagerBase
     {
-        private const string NUnitVersion = "2.6.4";
-        private const string NunitAdapterVersion = "2.2.0";
+        private const string NUnitVersion = "2.7.1";
+        private const string NunitAdapterVersion = "2.3.0";
 
         /// <summary>
         /// Initializes a new instance of the <see cref="NUnit2SolutionManager"/> class.
