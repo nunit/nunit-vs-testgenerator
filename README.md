@@ -4,7 +4,7 @@ This is an extension for Visual Studio that extends
 the test functionality to allow you to create unit tests and IntelliTests.
 It works for Visual Studio 2015, 2017 and 2019. 
 The extension extends the built in test generator functionality allowing
-developers to generate tests using NUnit 2.6.x or NUnit 3.x.
+developers to generate tests using NUnit 2.7.x or NUnit 3.x.
 
 Please note that IntelliTest is only available in Visual
 Studio Enterprise edition. Other editions of Visual Studio 
