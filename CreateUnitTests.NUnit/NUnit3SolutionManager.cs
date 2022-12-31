@@ -33,8 +33,9 @@ namespace TestGeneration.Extensions.NUnit
 {
     public class NUnit3SolutionManager : SolutionManagerBase
     {
-        private const string NUnitVersion = "3.12.0";
-        private const string NunitAdapterVersion = "3.15.1";
+        private const string NUnitVersion = "3.13.3";
+        private const string NunitAdapterVersion = "4.3.1";
+        private const string TestSDKVersion = "17.4.1";
 
         /// <summary>
         /// Initializes a new instance of the <see cref="NUnit3SolutionManager"/> class.
@@ -64,6 +65,7 @@ namespace TestGeneration.Extensions.NUnit
             base.OnUnitTestProjectCreated(unitTestProject, sourceMethod);
             this.EnsureNuGetReference(unitTestProject, "NUnit", NUnitVersion);
             this.EnsureNuGetReference(unitTestProject, "NUnit3TestAdapter", NunitAdapterVersion);
+            this.EnsureNuGetReference(unitTestProject, "Microsoft.NET.Test.Sdk", TestSDKVersion);
 
             var vsp = unitTestProject.Object as VSProject2;
             var reference = vsp?.References.Find(GlobalConstants.MSTestAssemblyName);
