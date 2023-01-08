@@ -1,4 +1,4 @@
-﻿// ***********************************************************************
+// ***********************************************************************
 // Copyright (c) 2015-2018 Terje Sandstrom
 //
 // Permission is hereby granted, free of charge, to any person obtaining
@@ -36,9 +36,6 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
 
     using Microsoft.Pex.Framework.Packages;
 
-   
-
-
     public class NunitTestFrameworkPackageAttribute : PexPackageAttributeBase
     {
         protected override void Initialize(IEngine engine)
@@ -49,9 +46,7 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
             var host = testFrameworkService as IPexComponent;
 
             testFrameworkService.AddTestFramework(new NUnit3TestFramework(host));
-            testFrameworkService.AddTestFramework(new NUnit2TestFramework(host));
         }
-    
 
         public override string Name => nameof(NUnitTestFrameworkPackage);
     }
