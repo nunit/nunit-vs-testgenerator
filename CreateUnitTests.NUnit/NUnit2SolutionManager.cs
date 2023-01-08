@@ -1,4 +1,4 @@
-﻿// ***********************************************************************
+// ***********************************************************************
 // Copyright (c) 2015-2018 Terje Sandstrom
 //
 // Permission is hereby granted, free of charge, to any person obtaining
@@ -39,6 +39,7 @@ namespace TestGeneration.Extensions.NUnit
     {
         private const string NUnitVersion = "2.6.4";
         private const string NunitAdapterVersion = "2.2.0";
+        private const string TestSDKVersion = "17.4.1";
 
         /// <summary>
         /// Initializes a new instance of the <see cref="NUnit2SolutionManager"/> class.
@@ -68,6 +69,7 @@ namespace TestGeneration.Extensions.NUnit
             base.OnUnitTestProjectCreated(unitTestProject, sourceMethod);
             EnsureNuGetReference(unitTestProject, "NUnit", NUnitVersion);
             EnsureNuGetReference(unitTestProject, "NUnitTestAdapter", NunitAdapterVersion);
+            EnsureNuGetReference(unitTestProject, "Microsoft.NET.Test.Sdk", TestSDKVersion);
 
             var vsp = unitTestProject.Object as VSProject2;
             var reference = vsp?.References.Find(GlobalConstants.MSTestAssemblyName);

@@ -1,4 +1,4 @@
-﻿// ***********************************************************************
+// ***********************************************************************
 // Copyright (c) 2015-2018 Terje Sandstrom
 //
 // Permission is hereby granted, free of charge, to any person obtaining
@@ -132,11 +132,6 @@ namespace TestGeneration.Extensions.IntelliTest.NUnit
             SafeDebug.Assume(bitness != Bitness.Unsupported, "bitness != Bitness.Unsupported");
             return true;
         }
-
-        /// <summary>
-        /// The _expected exception attribute.
-        /// </summary>
-        [NonSerialized] TypeName expectedExceptionAttribute;
 
         /// <summary>
         /// Gets the ExpectedException attribute.
