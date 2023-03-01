@@ -1,15 +1,15 @@
-﻿using System.Reflection;
+using System.Reflection;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Test Generator NUnit extension")]
-[assembly: AssemblyDescription("Test Generator,  NUnit extensions for Visual Studio 2015.\nCreates Unit tests and Intellitests with both NUnit 2.6.4 and NUnit 3 frameworks.")]
+[assembly: AssemblyTitle("NUnit Test Generator VS2022")]
+[assembly: AssemblyDescription("Test Generator, NUnit extensions for Visual Studio 2022.\nCreates Unit tests and Intellitests with NUnit 3.x frameworks.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("NUnit.org")]
 [assembly: AssemblyProduct("Test Generator NUnit extension")]
-[assembly: AssemblyCopyright("(c) 2015 NUnit, Charlie Pool")]
+[assembly: AssemblyCopyright("(c) 2022 NUnit, Terje Sandstrom")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -28,5 +28,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.1.0.0")]
-[assembly: AssemblyFileVersion("1.1.0.0")]
+[assembly: AssemblyVersion("3.0.0.0")]
+[assembly: AssemblyFileVersion("3.0.0.0")]
