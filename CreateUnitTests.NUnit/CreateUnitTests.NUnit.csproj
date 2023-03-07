@@ -38,15 +38,15 @@
     <Reference Include="envdte80, Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualStudio.Interop, Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestGeneration">
-      <HintPath>c:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\TestGeneration\Microsoft.VisualStudio.TestPlatform.TestGeneration.dll</HintPath>
+      <HintPath>d:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\TestGeneration\Microsoft.VisualStudio.TestPlatform.TestGeneration.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestGeneration.Extensions">
-      <HintPath>c:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\TestGeneration\Microsoft.VisualStudio.TestPlatform.TestGeneration.Extensions.dll</HintPath>
+      <HintPath>d:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\TestGeneration\Microsoft.VisualStudio.TestPlatform.TestGeneration.Extensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestGeneration.Package">
-      <HintPath>c:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\TestGeneration\Microsoft.VisualStudio.TestPlatform.TestGeneration.Package.dll</HintPath>
+      <HintPath>d:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\TestGeneration\Microsoft.VisualStudio.TestPlatform.TestGeneration.Package.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
