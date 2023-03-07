@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="TestGeneration.Extensions.NUnit.de03c1c9-a95a-4098-ac1b-7a66d50fae60" Version="3.0" Language="en-US" Publisher="Terje Sandstrom" />
+        <Identity Id="TestGeneration.Extensions.NUnit.de03c1c9-a95a-4098-ac1b-7a66d50fae60" Version="3.0" Language="en-US" Publisher="NUnit Developers" />
         <DisplayName>NUnit Test Generator VS2022</DisplayName>
         <Description xml:space="preserve">Test Generator,  NUnit extensions for Visual Studio.
 Creates Unit tests and Intellitests with the NUnit 3 frameworks.
@@ -10,7 +10,7 @@ Works on Visual Studio from version 2022.
         <MoreInfo>https://github.com/nunit/nunit-vs-testgenerator</MoreInfo>
         <License>license.txt</License>
         <GettingStartedGuide>https://docs.nunit.org/articles/vs-test-generator/Visual-Studio-Test-Generator.html</GettingStartedGuide>
-        <ReleaseNotes>https://github.com/nunit/docs/wiki/TestGenerator-Release-Notes</ReleaseNotes>
+        <ReleaseNotes>https://docs.nunit.org/articles/vs-test-generator/TestGenerator-Release-Notes.html</ReleaseNotes>
         <Icon>nunit_90.png</Icon>
         <PreviewImage>preview.jpg</PreviewImage>
         <Tags>unit testing, NUnit</Tags>
